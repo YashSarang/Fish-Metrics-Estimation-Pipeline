@@ -1,0 +1,4 @@
+*.mp4
+*.jpg
+Detection-Model-Training/UnderWaterfish.v4i.yolov12/
+Detection-Model-Training/runs/
