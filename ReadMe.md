@@ -25,7 +25,7 @@ The fisheries sector often relies on manual fish measurement and grading techniq
 ---
 
 ## 📁 Repository Structure
-
+```bash
 project_root/
 ├── Build/
 │ ├── FishEstimatorWithWeight_Modified.py # Main pipeline script
@@ -45,7 +45,7 @@ project_root/
 ├── Project_Report.pdf
 ├── Code_Report.pdf
 └── README.md
-
+```
 
 ---
 
