@@ -14,7 +14,7 @@ This repository hosts the full implementation of an AI-based computer vision pip
 - ⚖️ **Weight Prediction** via polynomial regression
 - 🎞️ **Multi-level Video Compression** for efficient processing
 - 📊 **Summary Overlay** of processing stats on final output
-- 🧱 Modular design for easy model and feature upgrades
+- 🧱 **Modular design** for easy model and feature upgrades
 
 ---
 
