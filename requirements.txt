@@ -1,0 +1,22 @@
+# Core libraries
+numpy>=1.23
+pandas>=1.5
+opencv-python>=4.8
+scikit-learn>=1.2
+joblib>=1.2
+
+# YOLOv8/Ultralytics model
+ultralytics>=8.0.20
+
+# For parsing command-line arguments
+argparse  # Optional, usually built-in with Python ≥3.8
+
+# For video I/O and compression
+ffmpeg-python>=0.2.0  # Optional but useful for interacting with FFmpeg via subprocess
+
+# Optional: for ONNX model export
+onnx>=1.13
+onnxruntime>=1.15
+
+# Optional: if Excel is used for regression training
+openpyxl>=3.1

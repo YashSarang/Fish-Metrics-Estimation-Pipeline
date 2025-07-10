@@ -25,6 +25,7 @@ The fisheries sector often relies on manual fish measurement and grading techniq
 ---
 
 ## 📁 Repository Structure
+
 ```bash
 project_root/
 ├── Build/
@@ -54,25 +55,32 @@ project_root/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/fish-estimation-pipeline.git
+git clone https://github.com/YashSarang/fish-estimation-pipeline.git
 cd fish-estimation-pipeline
 ```
+
 ### 2. Install Dependencies
+
 Use a Python environment (Python 3.8+) and install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
+
 Make sure FFmpeg is installed and available in your system path.
 
 ### 3. Run the Pipeline
+
 ```bash
-python Build/FishEstimatorWithWeight_Modified.py \
-    --model Build/best.pt \
-    --output Final_outputs/output_video.mp4 \
-    --video Training_data-videos/input_video.mp4
+cd Build
+python FishEstimatorWithWeight_Modified.py --model best.pt --output ../Final_outputs/output_video.mp4 --video ../Training_data-videos/input_video.mp4
+
+Example:
+python FishEstimatorWithWeight_Modified.py --model best.pt --output ../Final_outputs/output_video.mp4 --video ../Training_data-videos/C1.mp4
 ```
 
 ### ⚙️ Command-Line Arguments
+
 ```bash
 Argument	        Type	Description	                        Default
 --video	                str	Input video file path	                Required
@@ -87,8 +95,11 @@ Argument	        Type	Description	                        Default
 --show_video	        bool	Show video preview while processing	True
 --batch_process	        bool	Enable memory-efficient processing	True
 ```
+
 ---
+
 ## 📈 Model Performance
+
 ```bash
 Model	mAP@50	Precision	Recall
 YOLOv12	82.6%	77.1%	83.8%
@@ -98,20 +109,30 @@ Weight Estimation (Degree 2 Polynomial Regression):
 Weight ≈ 0.0129 + 1.0643 × Length + 0.00008 × Length²
 MSE = 0.00085, R² = 0.99925
 ```
+
 ---
+
 ## 🧪 Sample Output
+
 Annotated output videos include:
-* Fish bounding boxes,
-* Real-world length and weight,
-* Summary clip all the fishes at the end (avg, total, individual weights, lengths and widths)
+
+- Fish bounding boxes,
+- Real-world length and weight,
+- Summary clip all the fishes at the end (avg, total, individual weights, lengths and widths)
+
 ---
+
 ## 🚧 Limitations and Future Work
+
 No object tracking yet (fish IDs not persistent across frames)
 Video quality significantly impacts performance
 RoboFlow-labeled data requires manual review
 Behavior and freshness analytics are in future scope
+
 ---
+
 ## 📅 Roadmap
+
 - Fish detection with YOLOv12
 - ArUco-based length scaling
 - Polynomial regression for weight estimation
@@ -120,8 +141,11 @@ Behavior and freshness analytics are in future scope
 - Integrate behavior trajectory analysis
 - Visual freshness estimation module
 - Web UI for video upload and download
+
 ---
+
 ## 🧑‍💻 Contributor
+
 Yash Sarang ~ M.S. by Research – IIT Bombay.
 yashsarang.com
 📧 Contact for collaborations, research extensions, or implementation help.
@@ -129,13 +153,16 @@ yashsarang.com
 ---
 
 ## 📄 References
+
 YOLOv12: Vision Transformer-based detection
 OpenCV ArUco: Marker tracking and calibration
 Scikit-Learn: Regression modeling
 FFmpeg: Video encoding
 
 ---
+
 ## 📜 License
+
 This project is licensed under the MIT License. See LICENSE for details.
- 
+
 ---
